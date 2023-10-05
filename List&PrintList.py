@@ -19,11 +19,11 @@ bed = 10.75
 bath = 9.50
 
 # Create list areas
-areas = [["hall",11.25],["kit",18.0],["liv",20.0],["bed",10.75],["bath",9.50]]
+areas = [hall, kit, liv, bed, bath]
 
 # Print areas
-for i in range(len(areas)):
-    print (areas[i])
+
+print(areas)
 
 # Create list with different types
 # A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including strings, floats, booleans, etc.
@@ -45,11 +45,10 @@ bed = 10.75
 bath = 9.50
 
 # Adapt list areas
-areas = ["living room", "bathroom",liv,bath]
-areas.extend(["hallway","kitchen", "bedroom",hall, kit, bed])
+areas = ["hallway",hall,"kitchen",kit,"living room",liv,"bedroom",bed,"bathroom",bath]
+
 # Print areas
-for i in areas:
-    print(i)
+print(areas)
     
 # Select the valid list
 # A list can contain any Python type. But a list itself is also a Python type. That means that a list can also contain a list! Python is getting funkier by the minute, but fear not, just remember the list syntax:
@@ -59,13 +58,11 @@ for i in areas:
 
 # A. [1, 3, 4, 2] B. [[1, 2, 3], [4, 5, 7]] C. [1 + 2, "a" * 5, 3]
 
-c = [1 + 2, "a" * 5, 3]
-for i in c:
-    print(i)
+c = [1 + 2, "a" * 5, 3] 
+print(type(c))
+
 a = [1, 3, 4, 2]
-for i in a:
-    print(i)
+print(type(a))
 b = [[1, 2, 3], [4, 5, 7]]
-for i in b:
-    print(i)
+print(type(b))
 # A,B and C are correct anwers

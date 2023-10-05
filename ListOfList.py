@@ -28,21 +28,12 @@ house = [["hallway", hall],
          ["bathroom", bath]]
 
 # Print out house
-for i in house:
-    print(i)
+print(house)
 
 # Print out the type of house
-for i in house:
-    print(type(i))
+print(type(house))
 
-# result
-# ['hallway', 11.25]
-# ['kitchen', 18.0]
-# ['living room', 20.0]
-# ['bedroom', 10.75]
-# ['bathroom', 9.5]
+###  result
+#[['hallway', 11.25], ['kitchen', 18.0], ['living room', 20.0], ['bedroom', 10.75], ['bathroom', 9.5]]
 # <class 'list'>
-# <class 'list'>
-# <class 'list'>
-# <class 'list'>
-# <class 'list'>
+
