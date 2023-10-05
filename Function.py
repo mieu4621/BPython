@@ -30,8 +30,8 @@ print(type(var1))
 print(len(var1))
 
 # Convert var2 to an integer: out2
-int(var2)
-print(var2)
+out2 = int(var2)
+print(out2)
 
 ### HELP
 # Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: help(). In IPython specifically, you can also use ? before the function name.
@@ -69,9 +69,132 @@ first = [11.25, 18.0, 20.0]
 second = [10.75, 9.50]
 
 # Paste together first and second: full
-
+full = first + second
 
 # Sort full in descending order: full_sorted
 
-
+full_sorted = sorted(full, reverse=True)
 # Print out full_sorted
+print(full_sorted)
+
+### STRING METHOD
+
+# Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type help(str) in the IPython Shell.
+
+# A string place has already been created for you to experiment with.
+
+# Instructions
+
+# Use the upper() method on place and store the result in place_up. Use the syntax for calling methods that you learned in the previous video.
+# Print out place and place_up. Did both change?
+# Print out the number of o's on the variable place by calling count() on place and passing the letter 'o' as an input to the method. We're talking about the variable place, not the word "place"!
+
+# string to experiment with: place
+place = "poolhouse"
+
+# Use upper() on place: place_up
+place_up = place.upper()
+
+# Print out place and place_up
+print(place)
+print(place_up)
+
+# Print out the number of o's in place
+print(place.count("o"))
+
+### LIST METHODS
+
+# List Methods (2)
+# Most list methods will change the list they're called on. Examples are:
+
+# append(), that adds an element to the list it is called on,
+# remove(), that removes the first element of a list that matches the input, and
+# reverse(), that reverses the order of the elements in the list it is called on.
+# You'll be working on the list with the area of different parts of the house: areas.
+
+# Instructions
+# 100 XP
+# Use append() twice to add the size of the poolhouse and the garage again: 24.5 and 15.45, respectively. Make sure to add them in this order.
+# Print out areas
+# Use the reverse() method to reverse the order of the elements in areas.
+# Print out areas once more.
+
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Use append twice to add poolhouse and garage size
+areas.append(24.5)
+areas.append(15.45)
+# you can usse extend() to add elements into list
+# areas.extend([24.5,15.45])
+# Print out areas
+print(areas)
+
+# Reverse the orders of the elements in areas
+areas.reverse()
+
+# Print out areas
+print(areas)
+
+### IMPORT PACKET
+
+# As a data scientist, some notions of geometry never hurt. Let's refresh some of the basics.
+
+# For a fancy clustering algorithm, you want to find the circumference, 
+# , and area, 
+# , of a circle. When the radius of the circle is r, you can calculate 
+#  and 
+#  as:
+
+
+# In Python, the symbol for exponentiation is **. This operator raises the number to its left to the power of the number to its right. For example 3**4 is 3 to the power of 4 and will give 81.
+
+# To use the constant pi, you'll need the math package. A variable r is already coded in the script. Fill in the code to calculate C and A and see how the print() functions create some nice printouts.
+
+# Instructions
+
+# Import the math package. Now you can access the constant pi with math.pi.
+# Calculate the circumference of the circle and store it in C.
+# Calculate the area of the circle and store it in A.
+
+# Import the math package
+import math 
+
+# Definition of radius
+r = 0.43
+
+# Calculate C
+
+C = 2*(math.pi)*r
+
+# Calculate A
+A = r**2 * math.pi
+
+# Build printout
+print("Circumference: " + str(C))
+print("Area: " + str(A))
+
+### SELECTIVE IMPORT
+
+# General imports, like import math, make all functionality from the math package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+
+# from math import pi
+# Let's say the Moon's orbit around planet Earth is a perfect circle, with a radius r (in km) that is defined in the script.
+
+# Instructions
+
+# Perform a selective import from the math package where you only import the radians function.
+# Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to dist. You can calculate this as r * phi, where r is the radius and phi is the angle in radians. To convert an angle in degrees to an angle in radians, use the radians() function, which you just imported.
+# Print out dist.
+
+# Import radians function of math package
+from math import radians
+from math import pi
+# Definition of radius
+r = 192500
+
+# Travel distance of Moon over 12 degrees. Store in dist.
+dist = r *(radians(12))
+
+# Print out dist
+print(dist)
